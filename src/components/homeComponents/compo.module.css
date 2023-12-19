@@ -1,0 +1,163 @@
+.Title {
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero start */
+
+/* Hero End */
+
+
+.CardImgs {
+    max-width: 200px;
+    height: 280px;
+    margin-bottom: 1rem;
+}
+
+.imgSet {
+    max-width: 200px;
+    width: 200px;
+    height: 280px;
+    object-fit: fill;
+    transition: ease-in 0.2s;
+    position: absolute;
+    z-index: -1;
+    margin-bottom: 1rem;
+}
+
+.CardImgs:hover .imgSet {
+    border-radius: 0px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 5px 5px 10px #d0d0d0,
+        -5px -5px 10px #f0f0f0;
+    z-index: -1;
+    transform: scale(105%);
+    border-radius: 5px;
+    filter: brightness(0.5);
+}
+
+.CardImgs:hover div {
+    opacity: 1;
+}
+
+.movieTitle {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    /* Equivalent to text-lg */
+    font-weight: 600;
+    /* Equivalent to font-semibold */
+}
+
+.overview {
+    text-align: center;
+    opacity: 0;
+    font-size: 0.875rem;
+    /* Equivalent to text-sm */
+    display: block;
+    overflow: hidden;
+    max-height: 9em;
+    color: #f7f7f7;
+}
+
+.overviewCards {
+    height: 100px;
+    width: 100%;
+}
+.overviewRate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    font-size: 0.875rem;
+    /* Equivalent to text-sm */
+    overflow: hidden;
+    max-height: 9em;
+    color: rgb(219, 209, 18); 
+}
+/* Animation */
+.wrapper {
+    display: flex;
+}
+
+.wrapper .dynamicTxts {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamicTxts li {
+    list-style: none;
+    color: #673AB7;
+    font-size: 3.5rem;
+    font-weight: 900;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.dynamicTxts li span {
+    position: relative;
+}
+
+.dynamicTxts li span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-left: 2px solid #000000;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .CardImgs{
+        margin: 5px;
+        max-width: 180px;
+        height: 260px;
+        margin-bottom: 3rem;
+    }
+    .imgSet{
+        max-width: 180px;
+        width: 180px;
+        height: 260px;
+        margin-bottom: 0.5rem;
+    }
+    .wrapper{
+        justify-content: center;
+    }
+    .dynamicTxts li{
+        font-size: 2.4rem;
+    }
+}

@@ -1,0 +1,25 @@
+.body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.banner{
+    z-index: -8;
+    position: absolute;
+    width: 100%;
+    max-width: fit-content;
+    user-select: none;
+    height: 180vw;
+    max-height: fit-content;
+    filter: brightness(0.5);
+    object-fit: cover;
+}
+.cards{
+    margin-left: 10px;
+    display: flex;
+ margin-top: 10px;   
+}
+
+

@@ -1,0 +1,58 @@
+/* HOVER STYLING START */
+
+.hoverData{
+    /* display: none; */
+    right: 30px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border:  solid 2px;
+}
+.hoverData:first-child{
+    margin-top: 0.5rem;
+}
+.hoverData .child{
+    margin-top: 0.5rem;
+}
+
+/* Triger data on Start */
+.hoverBtn{
+    cursor: pointer;
+}
+.hoverBtn:hover .hoverData{
+    cursor: none;
+    transform: translateY(0px);
+}
+/* Triger data on End */
+
+@media (min-width: 768px) {
+
+    .hoverData{
+        display: none;
+        transform:translateY(100px);
+        right: 30px;
+        border-radius: 5px;
+        position: absolute;
+        width: 12rem;
+        background-color: white;
+        height: 20rem;
+        border:  solid 2px;
+    }
+    .hoverData:first-child{
+        margin-top: 0.5rem;
+    }
+    
+    /* Triger data on Start */
+    .hoverBtn{
+        cursor: pointer;
+    }
+    .hoverBtn:hover .hoverData{
+        cursor: none;
+        display: block;
+        transform: translateY(0px);
+    }
+
+}
+
+/* HOVER STYLING END */
